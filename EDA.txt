@@ -1,0 +1,86 @@
+        EDA (EXPLOARATORY DATA ANALYSIS)
+
+        * Shallow analysis :
+
+-- Target variable : Churn
+-- number of individuals and columns : (7043, 20) when we get rid of column 'customerID'
+-- Variables type : 4 quantitatives var and 16 qualitatives var
+-- missing values : column TotalCharge is the only one with missing values. 
+The number of missing for this column is quite small among the total individuals we have. 
+
+	* Deep analysis :
+
+-- target variable visualization : 
+there are more customers who are actually remaining with the company than those who are churning
+-- Getting to know the dataset :
+        * Gender 
+This variable stand for the customer's gender : Male or Female. 
+By visualizing it we found that there are almost more male than female. Male = 3555, Female = 3488.
+        * SeniorCitizen
+This var Indicates if the customer is 65 or older : 1 or 0. 1 if it is older and 0 if not. 
+actually most of the customers are less than 65. 0 = 5901, 1 = 1142.
+        * Partner
+This Indicates if the customer is married: Yes or No. there are almost more non married customers than married customers.
+Married = 3402, Non Married = 3641
+        * Dependents
+Indicates if the customer lives with any dependents: Yes, No. 
+Dependents could be children, parents, grandparents, etc. About 70% of customers are living with no dependents.
+        * tenure
+Indicates the total amount of months that the customer has been with the company. more than 1000 customers are new in the company. they have like less than 5 months of being customer. about 800 customers are with the company it's been more than 65 months. The average value of being with the company is 32 months.
+        * PhoneService
+Indicates if the customer subscribes to home phone service with the company: Yes, No. There are almost no customer who haven't subscribed to home phone service.
+        * MultipleLines
+Indicates if the customer subscribes to multiple telephone lines with the company: Yes, No. For those who have subscribed to home phone service most of them have almost one phone line unlike those who have multiple.
+        * InternetService
+Indicates if the customer subscribes to Internet service with the company: No, DSL, Fiber Optic. About 3096 are using 'fiber optic' 2421 are using 'DSL' and about 1526 don't subscribe to internet service.
+        * OnlineSecurity
+Indicates if the customer subscribes to an additional online security service provided by the company: Yes, No. For those who have internet service most have not signed up for additional online security.
+        * OnlineBackup
+Indicates if the customer subscribes to an additional online backup service provided by the company: Yes, No. For those who have internet service most have not signed up for onlinebackup.
+        * DeviceProtection
+Indicates if the customer subscribes to an additional device protection plan for their Internet equipment provided by the company: Yes, No. For those who have internet service most of them didn't subscribe to deviceprotection.
+        * TechSupport
+Indicates if the customer subscribes to an additional technical support plan from the company with reduced wait times: Yes, No. 
+For those who have internet service, most have not signed up for device protection.
+        * Contract
+Indicates the customer’s current contract type: Month-to-Month, One Year, Two Year. The most used contract type is 'Month-to-Month' contract. over 55% of customers have signed it.
+        * MonthlyCharges
+Indicates the customer’s current total monthly charge for all their services from the company. On average, a given customer is charged 63 euros regardless of the type of contract. Moreover, few customers have subscribed to all services.
+        * TotalCharges
+Indicates the customer’s total charges. For those with lower charge their total charge is lower than those with higher charge.
+
+-- target var visualization according to the gender :
+Churning from the company is not related to the gender of the customer.
+-- target var visualization according to the seniorCitizen :
+Those who are actually churning are less than 65. this means that those who churned are younger than the remaining.
+-- target var visualization according to the partner :
+There is a trend that customers who churned were more likely to not have a partner.
+-- target var visualization according to Dependents :
+There is a trend that customers who churned were more likely to not have a dependent.
+-- target var visualization according to phoneService :
+There is no relation between churning from the company and phoneService.
+-- target var visualization according to MultipleLines :
+There is a trend that those who churned have as many as customers who signed up for multiple lines and those who didn't.
+-- target var visualization according to InternetService :
+Those who churned from the company tend to go for Fiber optic as internetService
+-- target var visualization according to OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport :
+The trend is that those who are actually churning are not interested to  additionnals services related to internetService.
+-- target var visualization according to Contract :
+There is a trend that customers who churned were more likely to be on a Month-to-Month contract
+-- target var visualization according to StreamingTV, StreamingMovies :
+Among those who churned there are as many customer who use internet for streaming purpose through third party provider as there are customer who do not.
+-- target var visualization according to PaperlessBilling :
+There is a trend that those who churned used to go for PaperlessBilling than those who don't
+-- target var visualization according to PaymentMethod :
+There is a trend that those who churned prefer to use electronic check as payment method over others
+-- target var visualization according to tenure :
+On average those who churned were more likely to be with the company about 10 months. 
+In general they churned before one year. this should highlight the fact that those who churned were more likely to be on Month-to-Month contract. 
+-- target var visualization according to MonthlyCharges, TotalCharge :
+those who churned used to charge more than those who don't. This is obvious because we have seen previously that 
+there is a tendency to opt for fiber optics. As we may know, fiber optics is more expensive than DSL. 
+
+
+What is customer churn ?
+if a customer signed up for Fiber optic, not SeniorCitizen, seems to not be interessted to additional internet service, 
+with tenure about less than 12 and on month-to-month contract there is more chance that he is going to churn.
